@@ -15,6 +15,16 @@
 		box-shadow: 0 1rem 3rem rgba($color-black, 0.1);
 		text-align: center;
 		cursor: pointer;
+
+		@include respond(tab-port) {
+			top: 4rem;
+			right: 4rem;
+		}
+
+		@include respond(phone) {
+			top: 3rem;
+			right: 3rem;
+		}
 	}
 
 	&__background {
@@ -28,7 +38,15 @@
 		z-index: 1000;
 		transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
 
-		//transform: scale(80);
+		@include respond(tab-port) {
+			top: 4.5rem;
+			right: 4.5rem;
+		}
+
+		@include respond(phone) {
+			top: 3.5rem;
+			right: 3.5rem;
+		}
 	}
 
 	&__nav {
@@ -37,8 +55,8 @@
 		top: 0;
 		left: 0;
 		z-index: 1500;
-		opacity: 0;
 		visibility: hidden;
+		opacity: 0;
 		width: 0;
 		transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 	}
@@ -67,15 +85,9 @@
 			color: $color-white;
 			text-decoration: none;
 			text-transform: uppercase;
-			background-image: linear-gradient(
-				120deg,
-				transparent 0%,
-				transparent 50%,
-				$color-white 50%
-			);
+			background-image: linear-gradient(120deg, transparent 0%, transparent 50%, $color-white 50%);
 			background-size: 220%;
 			transition: all 0.4s;
-
 			span {
 				margin-right: 1.5rem;
 				display: inline-block;
@@ -100,6 +112,7 @@
 		visibility: visible;
 		width: 100%;
 	}
+
 
 	//ICON
 	&__icon {

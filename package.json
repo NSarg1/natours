@@ -4,7 +4,7 @@
   "description": "New project to master CSS3, Sass, Flexbox and grid.",
   "homepage": "https://github.com/NSarg7/Natours",
   "scripts": {
-    "watch:sass": "node-sass sass/main.scss css/style.css -w",
+    "watch:sass": "node-sass sass/main.scss css/style.comp.css -w",
     "devserver": "live-server",
     "start": "npm-run-all --parallel devserver watch:sass",
     
